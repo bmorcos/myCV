@@ -222,13 +222,38 @@
 % % Bibliography %
 % %%%%%%%%%%%%%%%%
 
-% \RequirePackage[backend=biber, style=verbose, maxnames=99, sorting=ydnt]{biblatex}
+\RequirePackage[backend=biber, style=verbose, maxnames=99, sorting=ydnt]{biblatex}
 
-% \DeclareFieldFormat[article]{title}{\href{\thefield{url}}{#1}}
-% \DeclareFieldFormat[inproceedings]{title}{\href{\thefield{url}}{#1}}
-% \DeclareFieldFormat[book]{title}{\href{\thefield{url}}{#1}}
-% \DeclareFieldFormat[misc]{title}{\href{\thefield{url}}{#1}}
-% \DeclareFieldFormat[report]{title}{\href{\thefield{url}}{#1}}
+% bold authors in bib
+% https://tex.stackexchange.com/questions/73136/make-specific-author-bold-using-biblatex/73246#73246
+\RequirePackage{xpatch}
+\newbibmacro*{name:bold}[2]{%
+  \edef\blx@tmp@name{\expandonce#1, \expandonce#2}%
+  \def\do##1{\ifdefstring{\blx@tmp@name}{##1}{\bfseries\listbreak}{}}%
+  \dolistloop{\boldnames}}
+\newcommand*{\boldnames}{}
+
+\xpretobibmacro{name:family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:family-given}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:family}{\endgroup}{}{}
+\xapptobibmacro{name:given-family}{\endgroup}{}{}
+\xapptobibmacro{name:family-given}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+%list of names to bold in bib
+\forcsvlist{\listadd\boldnames}
+  {{Morcos, Benjamin}}
+
+
+
+\DeclareFieldFormat[article]{title}{\href{\thefield{url}}{#1}}
+\DeclareFieldFormat[inproceedings]{title}{\href{\thefield{url}}{#1}}
+\DeclareFieldFormat[book]{title}{\href{\thefield{url}}{#1}}
+\DeclareFieldFormat[misc]{title}{\href{\thefield{url}}{#1}}
+\DeclareFieldFormat[report]{title}{\href{\thefield{url}}{#1}}
 
 % \DeclareBibliographyDriver{article}{%
 %   \printfield{title}%
@@ -271,23 +296,19 @@
 % }
 
 
-% \DeclareBibliographyDriver{inproceedings}{%
-%   \printfield{title}%
-%   \newblock%
-%   \printnames{author}%
-%   \par%
-%   \newblock%
-%   {%
-%     \footnotesize\addfontfeature{Color=lightgray}%
-%     \printfield{booktitle}%
-%     \setunit{\addcomma\space}%
-%     \printfield{year}%
-%     \setunit{\addcomma\space}%
-%     \printlist{location}%
-%     \newunit%
-%   }
-%   \par\vspace{0.3\baselineskip}
-% }
+\DeclareBibliographyDriver{inproceedings}{%
+  \printnames{author} (\printfield{year}). %
+  \newblock%
+  \emph{\printfield{title}}%
+  \par%
+  \newblock%
+  \small\addfontfeature{Color=lightgray}%
+  \printfield{booktitle}%
+  \setunit{\addcomma\space}%
+  \printlist{location}%
+  \newunit%
+  \par\vspace{0.3\baselineskip}
+}
 
 % \DeclareBibliographyDriver{misc}{%
 %   \printfield{title}%
@@ -327,30 +348,36 @@
 %   \par\vspace{0.3\baselineskip}
 % }
 
-% \DeclareNameFormat{author}{%
-%   \small\addfontfeature{Color=lightgray}%
-%   \nameparts{#1}\ifblank{\namepartgiven}{}{\namepartgiven\space}\namepartfamily%
-%   \ifthenelse{\value{listcount}<\value{liststop}}
-%     {\addcomma\space}
-%     {}%
-% }
+
+
+\DeclareNameFormat{author}{%
+  \nameparts{#1}%
+  \usebibmacro{name:given-family}
+    {\namepartfamily}
+    {\namepartgiven}
+    {\namepartprefix}
+    {\namepartsuffix}%
+  \usebibmacro{name:andothers}%
+}
 
 % \defbibheading{bibheading}[\bibname]{%
 %    \subsubsection*{#1}
 %    \markboth{#1}{#1}
 % }
 
-% \newcommand{\printbibsection}[2]{
-%   \begin{refsection}
-%     \nocite{*}
-%     \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=bibheading]
-%   \end{refsection}
-% }
+\newcommand{\printbibsection}[2]{
+  \begin{refsection}
+    \nocite{*}
+    % \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=bibheading]
+    \printbibliography[sorting=chronological, type={#1}, title={#2},
+                       heading=none]
+  \end{refsection}
+}
 
-% \DeclareSortingScheme{chronological}{
-%   \sort[direction=descending]{\field{year}}
-%   \sort[direction=descending]{\field{month}}
-% }
+\DeclareSortingScheme{chronological}{
+  \sort[direction=descending]{\field{year}}
+  \sort[direction=descending]{\field{month}}
+}
 
 
 
