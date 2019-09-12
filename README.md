@@ -1,5 +1,7 @@
 ## Build
 
+Run `make`, which will execute the following:
+
 ```
 xelatex bmorcos_cv.tex
 biber bmorcos_cv

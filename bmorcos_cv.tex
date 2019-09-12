@@ -33,7 +33,8 @@
 
 % \usepackage{marvosym} % needed to print glyphs for email, cell phone etc.
 
-\addbibresource{publications.bib} % Specify the bibliography file to include publications
+\addbibresource{publications.bib} % Specify the bibliography
+\urlstyle{same}  % URL style in bib
 
 
 \begin{document}
@@ -72,6 +73,9 @@
     GitHub, GitLab
     Vivado, Quartus
     AutoCAD, SolidWorks
+    \section{OPEN IP}
+    \href{https://github.com/abr/zynq-axi-dna}{zynq-axi-dna}
+    \href{https://github.com/abr/c5soc-ocl-id}{c5soc-ocl-id}
     \section{HOBBIES}
     Hiking \& Canoeing
     Climbing
@@ -79,6 +83,7 @@
     Music
     Cooking
     Various sports
+    Reading
 \end{aside}
 
 
@@ -87,9 +92,14 @@
 %%%%%%%%%%%%
 
 \section{ABOUT ME}
+\vspace{-2pt}
 
 \vspace{-5pt}
-My BASc. in Mechatronics Engineering has given me a broad foundation of skills which allowed me to explore a variety of fields. However, my latest position developing hardware in the context of neuroscience has me especially engaged and excited. Furthermore, working with a plethora of leading PhD. scientists allows me to learn everyday and motivated me to continue my educations and pursue a master's degree.
+My BASc in Mechatronics Engineering gave me a broad foundation of skills which
+allowed me to explore a variety of fields. However, developing hardware in the
+context of neuroscience has me especially engaged and excited. Furthermore,
+working with a plethora of leading PhD scientists allows me to learn everyday
+and motivated me to pursue a master's degree.
 
 
 %%%%%%%%%%%%%%%%%%%%%
@@ -97,20 +107,29 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
 %%%%%%%%%%%%%%%%%%%%%
 
 \section{EDUCATION}
+\vspace{-2pt}
 
 \begin{entrylist}
 
 \entry
     {2017--2019}
-    {MASc {\normalfont (candidate) --- Computer Hardware Engineering}}
+    {MASc {\normalfont --- Computer Hardware Engineering}}
     {\\The University of Waterloo}
-    {Working with FPGAs to develop efficient \textit{neuromorphic} hardware to accelerate neural network computation with focus on flexibility and ease-of-use. The hardware is accessible by Python via the Nengo development framework and has run-time reconfigurability to support a wide range of neural networks with a static hardware design.}
+    {Working with FPGAs to develop \textit{neuromorphic} hardware to
+    accelerate neural network computation with focus on flexibility and
+    ease-of-use. The hardware is accessible by Python via the Nengo development
+    framework and has run-time reconfigurability to support a wide range of
+    neural networks with a static hardware design.}
 
 \entry
     {2011--2016}
     {BASc {\normalfont --- Mechatronics Engineering, with distinction}}
     {\\The University of Waterloo}
-    {The Mechatronics program covers a broad base of mechanical, electrical, computer, and system design engineering while my elective courses leaned towards philosophy, machine intelligence, and neuroscience. My capstone design project was a small-scale portable hydro-electric generator built from scratch.}
+    {The Mechatronics program covers a broad base of mechanical, electrical,
+    computer, and system design engineering while my elective courses leaned
+    towards philosophy, machine intelligence, and neuroscience. My capstone
+    design project was a small-scale portable hydro-electric generator built
+    from scratch.}
 
 \end{entrylist}
 
@@ -119,6 +138,7 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{WORK EXPERIENCE}
+\vspace{-2pt}
 
 \begin{entrylist}
 
@@ -128,10 +148,15 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
     {Waterloo, ON}
     {\emph{Neuromorphic Engineer \& Lead Hardware Developer}
     \begin{itemize}
-        \item Design flexible FPGA implementations to efficiently run dynamic neural networks.
-        \item Creating a user-friendly interface layer between the FPGA and Python by extending Nengo, a Python library for building and simulating large-scale neural models.
-        \item Working in collaboration with leading scientists on neuro-robotics and various other computational neuroscience applications
-        \item Assisting with yearly \emph{Nengo Summer School} --- a two week in-depth workshop for international scholars to learn and use Nengo.
+        \item Design flexible FPGA implementations to efficiently run dynamic
+            neural networks.
+        \item Maintaining a user-friendly interface layer between the FPGA and
+            Python by extending the Nengo framework.
+        \item Working in collaboration with leading scientists on
+            neuro-robotics and various other computational neuroscience
+            applications.
+        \item Assisting with yearly \emph{Nengo Summer School} --- a two week
+            in-depth workshop for international scholars to learn and use Nengo.
     \end{itemize}}
 
 \entry
@@ -140,11 +165,13 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
     {Waterloo, ON}
     {\emph{Mechanical Designer}
     \begin{itemize}
-        \item Custom fixture designs starting with constraints and criteria and following through to vendor bids, manufacturing, and validation.
+        \item Custom fixture designs starting with constraints and criteria and
+            following through to vendor bids, manufacturing, and validation.
     \end{itemize}
     \emph{Sustaining Engineer}
     \begin{itemize}
-        \item Optimizing and troubleshooting software and hardware by recreating manufacturing observations in a lab environment.
+        \item Optimizing and troubleshooting software and hardware by recreating
+            manufacturing observations in a lab environment.
     \end{itemize}}
 
 \entry
@@ -153,8 +180,10 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
     {Cambridge, ON}
     {\emph{Quality Control Engineer for Lexus Hybrid group}
     \begin{itemize}
-        \item Design of experiments to discover root cause as well as custom\\ design and implementation of toolings to improve consistency.
-        \item Coordinating interdepartmental operations and started \\new initiative to relate internal KPIs to user experience.
+        \item Design of experiments to discover root cause as well as custom\\
+            design and implementation of toolings to improve consistency.
+        \item Coordinating interdepartmental operations and started \\
+            new initiative to relate internal KPIs to user experience.
     \end{itemize}}
 
 \end{entrylist}  % No page breaks inside environment, manually partitioning
@@ -166,7 +195,8 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
     {Waterloo, ON}
     {\emph{Medical Device Designer}
     \begin{itemize}
-        \item Algorithm design and analysis, including test case development, with focus on image processing and feature extraction.
+        \item Algorithm design and analysis, including test case development,
+            with focus on image processing and feature extraction.
         \item Rapid prototyping of mechanical parts.
     \end{itemize}}
 
@@ -181,7 +211,8 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
     \end{itemize}
     \emph{Electrical \& Systems Engineer}
     \begin{itemize}
-        \item Optimized sensors, PLC, and HMI to save man-hours and improve consistency.
+        \item Optimized sensors, PLC, and HMI to save man-hours and improve
+            consistency.
         \item Created a user-friendly database to track plant KPIs.
     \end{itemize}}
 
@@ -194,6 +225,7 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
 \section{PUBLICATIONS}
 \vspace{-4pt}
 
+\printbibsection{mathesis}{~}
 \printbibsection{inproceedings}{~}
 
 %%%%%%%%%%%%%%%%
@@ -201,30 +233,35 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
 %%%%%%%%%%%%%%%%
 
 \section{VOLUNTEER WORK}
+\vspace{-2pt}
 \begin{entrylist}
 
 \entry
     {2017--Now}
     {The Foodbank of Waterloo Region}
     {Kitchener, ON}
-    {Assisting at the distribution warehouse to sort food and keep track of local inventory. This is a fun, low mental effort, and social position that benefits the community --- everybody wins!}
+    {Assisting at the distribution warehouse to sort food and keep track of
+    local inventory. This is a fun, low mental effort, and social position that
+    benefits the community --- everybody wins!}
 
 \entry
     {2017}
     {Teaching Assistant}
     {Heterogeneous Architecture Summer School}
-    {Assist with a one week workshop teaching students about computation using heterogeneous platforms (FPGA, GPU, CPU).}
+    {Assist with a one week workshop teaching students about computation using
+    heterogeneous platforms (FPGA, GPU, CPU).}
 
 \entry
     {2014--2015}
     {Federation Orientation Committee}
     {The University of Waterloo}
-    {One of four volunteers responsible for planning Engineering Orientation Week 2015 for $\approx$2000 incoming students:
+    {One of four volunteers responsible for planning Engineering Orientation
+    Week 2015 for $\approx$2000 incoming students:
     \begin{itemize}
         \item Interview, hire, and manage a team of $\approx$400 volunteers.
         \item Obtain sponsorship and create a formal budget for the year.
         \item Work alongside numerous other entities within the University.
-        \item Keep well documented records for continuous improvement
+        \item Keep well documented records for continuous improvement.
     \end{itemize}}
 
 \entry
@@ -234,13 +271,11 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
     {Providing emergency first-aid for on-campus events.\\
     \emph{Operations Coordinator} --- 2014
     \begin{itemize}
-        \item Interface with the University.
         \item Manage and improve day-to-day and event operations.
     \end{itemize}
     \emph{Director of Training} --- 2012--2013
     \begin{itemize}
-        \item Organize weekly training to maintain standard of care.
-        \item Organize termly first-aid competition.
+        \item Organize weekly training and termly first-aid competition.
     \end{itemize}}
 
 \end{entrylist}
@@ -250,6 +285,7 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{CERTIFICATIONS \& AWARDS}
+\vspace{-2pt}
 
 \begin{entrylist}
 
@@ -257,13 +293,9 @@ My BASc. in Mechatronics Engineering has given me a broad foundation of skills w
     {2009--Now}
     {Advanced Medical First Responder}
     {\\Canadian Ski Patrol System \& St. John Ambulance}
-    {I used to volunteer as a ski patrol at Mt. Tremblant, QC and then I was part of the Campus Response Team during my undergrad. I no longer actively provide first-aid but I still maintain my certification!}
-
-% \entry
-%     {2013--2016}
-%     {Owner \& Landlord of a Rental Property}
-%     {Waterloo, ON}
-%     {During my undergrad I bought a house and rented to my friends which allowed me to live rent-free and taught me a great deal about budgeting, finances, and taxes.}
+    {I used to volunteer as a ski patrol at Mt. Tremblant, QC and then I was
+    a member of the Campus Response Team during my undergrad. I no longer
+    actively provide first-aid but I still maintain my certification!}
 
 \entry
     {2013}
