@@ -32,7 +32,8 @@
 % Add `lightheader` to change the dark background of the header to white
 
 % \usepackage{marvosym} % needed to print glyphs for email, cell phone etc.
-
+\usepackage{fancyhdr}  % For footer
+\renewcommand{\headrulewidth}{0pt}  % Remove horizontal header rule
 \addbibresource{publications.bib} % Specify the bibliography
 \urlstyle{same}  % URL style in bib
 
@@ -76,6 +77,7 @@
     AutoCAD, SolidWorks
     MATLAB, Simulink
     kdenlive (video editing)
+    inkscape (image editing)
     \section{OPEN IP}
     \href{https://github.com/abr/zynq-axi-dna}{zynq-axi-dna}
     \href{https://github.com/abr/c5soc-ocl-id}{c5soc-ocl-id}
@@ -87,7 +89,7 @@
     Music
     Cooking
     Various sports
-    Reading
+    Philosophy
 \end{aside}
 
 
@@ -101,9 +103,9 @@
 \vspace{-5pt}
 My BASc in Mechatronics Engineering gave me a broad foundation of skills which
 allowed me to explore a variety of fields. However, developing hardware in the
-context of neuroscience has me especially engaged and excited. Furthermore,
-working with a plethora of leading PhD scientists allows me to learn everyday
-and motivated me to pursue a master's degree.
+context of neuroscience has me especially engaged and excited. After completing
+my master's degree I continue to learn everyday as I work with a plethora of
+leading PhD scientists!
 
 
 %%%%%%%%%%%%%%%%%%%%%
@@ -150,12 +152,12 @@ and motivated me to pursue a master's degree.
     {2016--Now}
     {Applied Brain Research}
     {Waterloo, ON}
-    {\emph{Neuromorphic Engineer \& Lead Hardware Developer}
+    {\emph{Neuromorphic Software-Hardware Co-Developer}
     \begin{itemize}
+        \item Explore, optimize, and map neural applications to various
+            hardware backends.
         \item Design flexible FPGA implementations to efficiently run dynamic
-            neural networks.
-        \item Maintaining a user-friendly interface layer between the FPGA and
-            Python by extending the Nengo framework.
+            neural networks with a user-friendly Python interface.
         \item Working in collaboration with leading scientists on
             neuro-robotics and various other computational neuroscience
             applications.
@@ -229,6 +231,7 @@ and motivated me to pursue a master's degree.
 \section{PUBLICATIONS}
 \vspace{-4pt}
 
+\printbibsection{misc}{~}
 \printbibsection{mathesis}{~}
 \printbibsection{inproceedings}{~}
 
@@ -293,13 +296,13 @@ and motivated me to pursue a master's degree.
 
 \begin{entrylist}
 
-\entry
-    {2009--Now}
-    {Advanced Medical First Responder}
-    {\\Canadian Ski Patrol System \& St. John Ambulance}
-    {I used to volunteer as a ski patrol at Mt. Tremblant, QC and then I was
-    a member of the Campus Response Team during my undergrad. I no longer
-    actively provide first-aid but I still maintain my certification!}
+% \entry
+%     {2009--2020}
+%     {Advanced Medical First Responder}
+%     {\\Canadian Ski Patrol System \& St. John Ambulance}
+%     {I used to volunteer as a ski patrol at Mt. Tremblant, QC and then I was
+%     a member of the Campus Response Team during my undergrad. I no longer
+%     actively provide first-aid but I still maintain my certification!}
 
 \entry
     {2013}
@@ -320,5 +323,15 @@ and motivated me to pursue a master's degree.
     {\vspace{-11pt}}
 
 \end{entrylist}
+
+
+%%%%%%%%%%
+% FOOTER %
+%%%%%%%%%%
+
+\thispagestyle{fancy}  % Show footer
+\fancyfootoffset[L]{4.6cm}  % Compensate for sidebar
+\fancyhf{}  % Clear header and footer tempaltes
+\lfoot{\small\addfontfeature{Color=lightgray}Updated 2020-09-21}
 
 \end{document}
