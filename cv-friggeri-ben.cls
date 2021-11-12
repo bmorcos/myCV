@@ -140,25 +140,25 @@
 }
 
 \renewcommand{\section}[1]{
-  \par\vspace{\parskip}
+  \par\vspace{1.5\parskip}
   {%
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
   }
-  \par\vspace{\parskip}
+  \par\vspace{0.4\parskip}
 }
 
 \renewcommand{\subsection}[1]{
   \par\vspace{.5\parskip}%
-  {\Large\headingfont\color{headercolor} #1}
+  {\large\headingfont\color{headercolor} #1}
   \par\vspace{.25\parskip}%
 }
 
-\renewcommand{\subsubsection}[2]{
-  \par\vspace{.5\parskip}%
-  {\Large\headingfont\color{headercolor} #2}
-  \par\vspace{.25\parskip}%
-}
+% \renewcommand{\subsubsection}[2]{
+%   \par\vspace{.5\parskip}%
+%   {\Large\headingfont\color{headercolor} #2}
+%   \par\vspace{.25\parskip}%
+% }
 
 \pagestyle{empty}
 
@@ -166,6 +166,10 @@
 %%%%%%%%%%%%%%%%%%%%
 % List environment %
 %%%%%%%%%%%%%%%%%%%%
+
+% Slightly reduce itemize left indent
+% \RequirePackage{enumitem}
+% \setlist[itemize,1]{leftmargin=20pt}
 
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
@@ -202,7 +206,7 @@
 
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
-\setlength{\TPVertModule}{0.75cm}
+\setlength{\TPVertModule}{0.91cm}
 \newenvironment{aside}{%
   \let\oldsection\section
   \renewcommand{\section}[1]{
@@ -247,13 +251,15 @@
 \forcsvlist{\listadd\boldnames}
   {{Morcos, Benjamin}}
 
-
-
 \DeclareFieldFormat[article]{title}{\href{\thefield{url}}{#1}}
 \DeclareFieldFormat[inproceedings]{title}{\href{\thefield{url}}{#1}}
 \DeclareFieldFormat[book]{title}{\href{\thefield{url}}{#1}}
 \DeclareFieldFormat[misc]{title}{\href{\thefield{url}}{#1}}
 \DeclareFieldFormat[report]{title}{\href{\thefield{url}}{#1}}
+\DeclareFieldFormat[thesis]{title}{\href{\thefield{url}}{#1}}
+
+% Set spacing between bib entries
+\setlength{\bibitemsep}{0.75\baselineskip}
 
 % \DeclareBibliographyDriver{article}{%
 %   \printfield{title}%
@@ -295,7 +301,6 @@
 %   \par\vspace{0.3\baselineskip}
 % }
 
-
 \DeclareBibliographyDriver{inproceedings}{%
   \printnames{author} (\printfield{year}). %
   \newblock%
@@ -307,8 +312,10 @@
   \setunit{\addcomma\space}%
   \printlist{location}%
   \newunit%
-  \par\vspace{0.3\baselineskip}
+  % \par\vspace{0.75\baselineskip}
 }
+
+
 
 % \DeclareBibliographyDriver{misc}{%
 %   \printfield{title}%
@@ -368,10 +375,15 @@
 \newcommand{\printbibsection}[2]{
   \begin{refsection}
     \nocite{*}
-    % \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=bibheading]
-    \printbibliography[sorting=chronological, type={#1}, title={#2},
-                       heading=none]
+    \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=bibheading]
+    % \printbibliography[sorting=chronological, type={#1}, title={#2},
+    %                    heading=none]
   \end{refsection}
+}
+
+\newcommand{\printallbibsections}{
+  \nocite{*}
+  \printbibliography[sorting=chronological, heading=none]
 }
 
 \DeclareSortingScheme{chronological}{

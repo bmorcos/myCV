@@ -37,10 +37,9 @@
 \addbibresource{publications.bib} % Specify the bibliography
 \urlstyle{same}  % URL style in bib
 
-
 \begin{document}
 
-\header{Ben}{Morcos}{curious neuromorphic engineer} % Your name and current job title/field
+\header{BEN~}{MORCOS}{full(er) stack developer} % Your name and current job title/field
 
 %%%%%%%%%%%%%%%%%%%
 % SIDEBAR SECTION %
@@ -50,39 +49,49 @@
     \section{CONTACT}
     \hfill Waterloo
     \hfill Ontario, Canada
-    ~
-    \hfill +1.519.729.3223
+    \vspace{0.5\baselineskip} \hfill +1.519.729.3223
     \hfill \href{mailto:morcos.ben@gmail.com}{morcos.ben@gmail.com}
-    ~
     % \flogo \hfill \href{http://facebook.com/johnsmith}{fb://jsmith}
     % \tlogo \hfill \href{http://twitter.com/johnsmith}{@jsmith}
     % \llogo \hfill \href{http://linkedin.com/johnsmith}{in://johnsmith}
     % \vklogo \hfill \href{http://vk.com/johnsmith}{vk://johnsmith}
     % ~
-    \hfill \href{https://github.com/bmorcos}{github.com/bmorcos}
+    \vspace{0.5\baselineskip} \hfill%
+    \href{https://github.com/bmorcos}{github.com/bmorcos}
+    %
     \section{LANGUAGES}
-    English
-    French
+    English, French
+    %
     \section{PROGRAMMING}
-    Python
-    C, C++
+    Python, C, C++
     OpenCL, CUDA
     VHDL, Verilog, HLS
+    JavaScript, TypeScript
     \LaTeX, shell, Tcl
     VBA
+    %
     \section{TOOLS}
-    GitHub, GitLab, TravisCI
+    GitHub, GitLab
+    TravisCI, Codecov
     pytest, GTest
+    TensorFlow, TFMOT
+    NNI, Hyperopt
+    MongoDB, GraphQL
+    Conda, Docker
     Vivado, Quartus
     AutoCAD, SolidWorks
     MATLAB, Simulink
-    kdenlive (video editing)
-    inkscape (image editing)
+    kdenlive, inkscape
+    %
     \section{OPEN IP}
     \href{https://github.com/abr/zynq-axi-dna}{zynq-axi-dna}
     \href{https://github.com/abr/c5soc-ocl-id}{c5soc-ocl-id}
     \href{https://github.com/bmorcos/pre-commit-hooks-cpp}{pre-commit-hooks-cpp}
     \href{https://github.com/bmorcos/discord-downloader}{discord-downloader}
+    \par\vspace{0.5\baselineskip}\textbf{CONTRIBUTOR}
+    \href{https://github.com/nengo/nengo}{nengo}
+    \href{https://github.com/nengo/nengo-fpga}{nengo-fpga}
+    %
     \section{HOBBIES}
     Hiking \& Canoeing
     Climbing
@@ -94,27 +103,124 @@
 \end{aside}
 
 
+%%%%%%%%%%%%%%%%
+% QUICK SKILLS %
+%%%%%%%%%%%%%%%%
+
+\vspace{-1em}\hspace{-4.33cm}
+\textbf{\large{%
+\hfill SOFTWARE \hfill {\small\textbullet}%
+\hfill EMBEDDED \hfill {\small\textbullet}%
+\hfill AI/ML \hfill {\small\textbullet}%
+\hfill SYSTEM~DESIGN \hfill {\small\textbullet}%
+\hfill HARDWARE \hfill%
+}}%
+
+\vspace{-1ex}\hspace{-4.33cm}\hrulefill
+
+
 %%%%%%%%%%%%
 % ABOUT ME %
 %%%%%%%%%%%%
-
-\section{ABOUT ME}
 \vspace{-2pt}
+\section{ABOUT ME}
 
-\vspace{-5pt}
-My BASc in Mechatronics Engineering gave me a broad foundation of skills which
-allowed me to explore a variety of fields. However, developing hardware in the
-context of neuroscience has me especially engaged and excited. After completing
-my master's degree I continue to learn everyday as I work with a plethora of
-leading PhD scientists!
+My academic and work experience has given me development skills at many levels
+of abstraction. I have worked on everything from gate-level hardware to
+embedded software to frontend clients, and everything in between. This breadth
+of knowledge led me to the label \emph{full(er) stack developer} and I
+appreciate the perspective this affords me when designing systems and working
+across teams. I'm always looking to hone my skills and continue to learn new
+things. However, I am currently most interested in the middle of the full(er)
+stack from embedded to core application to backend.
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% WORK EXPERIENCE SECTION %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{WORK EXPERIENCE}
+
+\begin{entrylist}
+
+\entry
+    {2016--Now}
+    {Applied Brain Research}
+    {Waterloo, ON}
+    {\emph{Neuromorphic Software-Hardware Co-Developer}
+    \begin{itemize}
+        \item Lead efforts to explore, optimize, and implement neural
+            applications on various standard, embedded, and neuromorphic
+            hardware platforms.
+        \item Establish a common high-level interface, via GUIs and APIs, for
+            deploying neural networks across various hardware platforms.
+        \item Provide low-level libraries, interfaces, and protocols for
+            modular embedded neural deployments.
+        \item Bring to market edge AI web platform.
+        \item Devise novel AI/ML solutions and benchmarking for dynamical tasks.
+        \item Leverage model pruning and quantization techniques.
+        \item Collaborate with leading scientists pushing the boundaries of
+            computational neuroscience applications including autonomy, vision,
+            speech, and more.
+        \item Single handedly develop run-time flexible FPGA implementation to
+            efficiently run dynamic neural networks with a user-friendly Python
+            interface.
+        \item Evaluate possible ASIC designs for sparse, event-driven dynamic
+            neural networks.
+        \item Maintain clean code repositories with automated devops pipelines.
+        \item Manage and mentor co-op and Mitacs students.
+        \item Assist with yearly \emph{Nengo Summer School} --- a two week
+            in-depth workshop for international scholars to learn and use Nengo.
+    \end{itemize}}
+
+\entry
+    {2014--2015}
+    {Teledyne DALSA {\normalfont (co-op \times2)}}
+    {Waterloo, ON}
+    {\emph{Mechanical Designer}, \emph{Sustaining Engineer}
+    \begin{itemize}
+        \item Designed and validated custom fixtures for testing and production.
+        \item Optimized and debugged software and hardware of vision sensors.
+    \end{itemize}}
+
+\entry
+    {2014}
+    {Toyota Motor Manufacturing Canada {\normalfont (co-op)}}
+    {Cambridge, ON}
+    {\emph{Quality Control Engineer for Lexus Hybrid group}
+    \begin{itemize}
+        \item Performed root cause analysis and coordinated trial solutions.
+    \end{itemize}}
+
+\entry
+    {2013}
+    {Intellijoint Surgical {\normalfont \emph{formerly Avenir Medical} (co-op)}}
+    {Waterloo, ON}
+    {\emph{Medical Device Designer}
+    \begin{itemize}
+        \item Implemented and evaluated optical feature extraction algorithms.
+    \end{itemize}}
+
+\entry
+    {2012--2013}
+    {IKO Industries {\normalfont (co-op \times2)}}
+    {Madoc, ON}
+    {\emph{Mechanical Engineer}, \emph{Electrical \& Systems Engineer}
+    \begin{itemize}
+        \item Improved throughput by 13\% with analysis and recommendation.
+        \item Optimized sensors, PLC, and HMI.
+    \end{itemize}
+    }
+\end{entrylist}
+
+
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%
 % EDUCATION SECTION %
 %%%%%%%%%%%%%%%%%%%%%
 
 \section{EDUCATION}
-\vspace{-2pt}
 
 \begin{entrylist}
 
@@ -122,11 +228,11 @@ leading PhD scientists!
     {2017--2019}
     {MASc {\normalfont --- Computer Hardware Engineering}}
     {\\The University of Waterloo}
-    {Working with FPGAs to develop \textit{neuromorphic} hardware to
-    accelerate neural network computation with focus on flexibility and
-    ease-of-use. The hardware is accessible by Python via the Nengo development
-    framework and has run-time reconfigurability to support a wide range of
-    neural networks with a static hardware design.}
+    {Developed a neuromorphic hardware accelerator on FPGAs with a focus on
+    run-time flexibility and accessibility. The hardware is conveniently
+    connected to Python via the Nengo development framework and is run-time
+    configurable to support a wide range of neural networks with a static
+    hardware design.}
 
 \entry
     {2011--2016}
@@ -140,115 +246,31 @@ leading PhD scientists!
 
 \end{entrylist}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% WORK EXPERIENCE SECTION %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{WORK EXPERIENCE}
-\vspace{-2pt}
-
-\begin{entrylist}
-
-\entry
-    {2016--Now}
-    {Applied Brain Research}
-    {Waterloo, ON}
-    {\emph{Neuromorphic Software-Hardware Co-Developer}
-    \begin{itemize}
-        \item Explore, optimize, and map neural applications to various
-            hardware backends.
-        \item Design flexible FPGA implementations to efficiently run dynamic
-            neural networks with a user-friendly Python interface.
-        \item Working in collaboration with leading scientists on
-            neuro-robotics and various other computational neuroscience
-            applications.
-        \item Assisting with yearly \emph{Nengo Summer School} --- a two week
-            in-depth workshop for international scholars to learn and use Nengo.
-    \end{itemize}}
-
-\entry
-    {2014--2015}
-    {Teledyne DALSA {\normalfont (co-op)}}
-    {Waterloo, ON}
-    {\emph{Mechanical Designer}
-    \begin{itemize}
-        \item Custom fixture designs starting with constraints and criteria and
-            following through to vendor bids, manufacturing, and validation.
-    \end{itemize}
-    \emph{Sustaining Engineer}
-    \begin{itemize}
-        \item Optimizing and troubleshooting software and hardware by recreating
-            manufacturing observations in a lab environment.
-    \end{itemize}}
-
-\entry
-    {2014}
-    {Toyota Motor Manufacturing Canada {\normalfont (co-op)}}
-    {Cambridge, ON}
-    {\emph{Quality Control Engineer for Lexus Hybrid group}
-    \begin{itemize}
-        \item Design of experiments to discover root cause as well as custom\\
-            design and implementation of toolings to improve consistency.
-        \item Coordinating interdepartmental operations and started \\
-            new initiative to relate internal KPIs to user experience.
-    \end{itemize}}
-
-\end{entrylist}  % No page breaks inside environment, manually partitioning
-\begin{entrylist}
-
-\entry
-    {2013}
-    {Intellijoint Surgical {\normalfont \emph{formerly Avenir Medical} (co-op)}}
-    {Waterloo, ON}
-    {\emph{Medical Device Designer}
-    \begin{itemize}
-        \item Algorithm design and analysis, including test case development,
-            with focus on image processing and feature extraction.
-        \item Rapid prototyping of mechanical parts.
-    \end{itemize}}
-
-\entry
-    {2012--2013}
-    {IKO Industries {\normalfont (co-op)}}
-    {Madoc, ON}
-    {\emph{Mechanical Engineer}
-    \begin{itemize}
-        \item Improved throughput by 13\% with analysis and recommendation.
-        \item Helped organize and analyze full process audit.
-    \end{itemize}
-    \emph{Electrical \& Systems Engineer}
-    \begin{itemize}
-        \item Optimized sensors, PLC, and HMI to save man-hours and improve
-            consistency.
-        \item Created a user-friendly database to track plant KPIs.
-    \end{itemize}}
-
-\end{entrylist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % PUBLICATIONS SECTION %
 %%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{PUBLICATIONS}
-\vspace{-4pt}
 
-\printbibsection{misc}{~}
-\printbibsection{mathesis}{~}
-\printbibsection{inproceedings}{~}
+% \printbibsection{inproceedings}{~}
+% \printbibsection{thesis}{~}
+\printallbibsections
+
 
 %%%%%%%%%%%%%%%%
 % VOLUNTEERING %
 %%%%%%%%%%%%%%%%
 
 \section{VOLUNTEER WORK}
-\vspace{-2pt}
+
 \begin{entrylist}
 
 \entry
     {2017--Now}
     {The Foodbank of Waterloo Region}
     {Kitchener, ON}
-    {Assisting at the distribution warehouse to sort food and keep track of
+    {Work at the distribution warehouse to sort food and keep track of
     local inventory. This is a fun, low mental effort, and social position that
     benefits the community --- everybody wins!}
 
@@ -256,8 +278,8 @@ leading PhD scientists!
     {2017}
     {Teaching Assistant}
     {Heterogeneous Architecture Summer School}
-    {Assist with a one week workshop teaching students about computation using
-    heterogeneous platforms (FPGA, GPU, CPU).}
+    {Assisted with a one week workshop teaching students about computation using
+    heterogeneous hardware platforms (FPGA, GPU, CPU).}
 
 \entry
     {2014--2015}
@@ -266,25 +288,25 @@ leading PhD scientists!
     {One of four volunteers responsible for planning Engineering Orientation
     Week 2015 for $\approx$2000 incoming students:
     \begin{itemize}
-        \item Interview, hire, and manage a team of $\approx$400 volunteers.
-        \item Obtain sponsorship and create a formal budget for the year.
-        \item Work alongside numerous other entities within the University.
-        \item Keep well documented records for continuous improvement.
+        \item Interviewed, hired, and managed a team of $\approx$400 volunteers.
+        \item Obtained sponsorship and created a formal budget for the year.
+        \item Worked alongside numerous other entities within the University.
+        \item Kept well documented records for continuous improvement.
     \end{itemize}}
 
-\entry
-    {2011--2015}
-    {Campus Response Team}
-    {The University of Waterloo}
-    {Providing emergency first-aid for on-campus events.\\
-    \emph{Operations Coordinator} --- 2014
-    \begin{itemize}
-        \item Manage and improve day-to-day and event operations.
-    \end{itemize}
-    \emph{Director of Training} --- 2012--2013
-    \begin{itemize}
-        \item Organize weekly training and termly first-aid competition.
-    \end{itemize}}
+% \entry
+%     {2011--2015}
+%     {Campus Response Team}
+%     {The University of Waterloo}
+%     {Providing emergency first-aid for on-campus events.\\
+%     \emph{Operations Coordinator} --- 2014
+%     \begin{itemize}
+%         \item Manage and improve day-to-day and event operations.
+%     \end{itemize}
+%     \emph{Director of Training} --- 2012--2013
+%     \begin{itemize}
+%         \item Organize weekly training and termly first-aid competition.
+%     \end{itemize}}
 
 \end{entrylist}
 
@@ -292,38 +314,38 @@ leading PhD scientists!
 % CERTIFICATIONS & AWARDS %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{CERTIFICATIONS \& AWARDS}
-\vspace{-2pt}
+% \section{CERTIFICATIONS \& AWARDS}
+% \vspace{-2pt}
 
-\begin{entrylist}
+% \begin{entrylist}
+
+% % \entry
+% %     {2009--2020}
+% %     {Advanced Medical First Responder}
+% %     {\\Canadian Ski Patrol System \& St. John Ambulance}
+% %     {I used to volunteer as a ski patrol at Mt. Tremblant, QC and then I was
+% %     a member of the Campus Response Team during my undergrad. I no longer
+% %     actively provide first-aid but I still maintain my certification!}
 
 % \entry
-%     {2009--2020}
-%     {Advanced Medical First Responder}
-%     {\\Canadian Ski Patrol System \& St. John Ambulance}
-%     {I used to volunteer as a ski patrol at Mt. Tremblant, QC and then I was
-%     a member of the Campus Response Team during my undergrad. I no longer
-%     actively provide first-aid but I still maintain my certification!}
+%     {2013}
+%     {NSERC Industrial Undergraduate Student Research Award}
+%     {Intellijoint Surgical}
+%     {\vspace{-11pt}}
 
-\entry
-    {2013}
-    {NSERC Industrial Undergraduate Student Research Award}
-    {Intellijoint Surgical}
-    {\vspace{-11pt}}
+% \entry
+%     {2012}
+%     {Nominated as Co-op Student of the Year}
+%     {The University of Waterloo}
+%     {\vspace{-11pt}}
 
-\entry
-    {2012}
-    {Nominated as Co-op Student of the Year}
-    {The University of Waterloo}
-    {\vspace{-11pt}}
+% \entry
+%     {2011}
+%     {President's Scholarship}
+%     {The University of Waterloo}
+%     {\vspace{-11pt}}
 
-\entry
-    {2011}
-    {President's Scholarship}
-    {The University of Waterloo}
-    {\vspace{-11pt}}
-
-\end{entrylist}
+% \end{entrylist}
 
 
 %%%%%%%%%%
@@ -333,6 +355,6 @@ leading PhD scientists!
 \thispagestyle{fancy}  % Show footer
 \fancyfootoffset[L]{4.6cm}  % Compensate for sidebar
 \fancyhf{}  % Clear header and footer tempaltes
-\lfoot{\small\addfontfeature{Color=lightgray}Updated 2020-11-18}
+\lfoot{\small\addfontfeature{Color=lightgray}Last updated 2021-11-18}
 
 \end{document}
