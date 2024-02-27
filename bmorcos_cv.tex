@@ -63,18 +63,20 @@
     English, French
     %
     \section{PROGRAMMING}
-    Python, C/C++, Go
+    Python, C/C++, Golang
     OpenCL, CUDA
     VHDL, Verilog, HLS
     JavaScript, TypeScript
     \LaTeX, shell, Tcl, Make
     %
     \section{TOOLS}
-    Git, AWS
-    Docker, Kubernetes
-    Rest, GraphQL
-    TravisCI, Codecov
+    Git, Github Actions
     Jenkins, Harness
+    Docker, Kubernetes
+    AWS, Postgres
+    REST, GraphQL
+    Kafka, Hazelcast
+    Prometheus, Grafana
     pytest, GTest
     TensorFlow, TFMOT
     NNI, Hyperopt
@@ -91,13 +93,12 @@
     \href{https://github.com/nengo/nengo-fpga}{nengo-fpga}
     %
     \section{HOBBIES}
-    Hiking \& Canoeing
     Climbing
+    Hiking \& Canoeing
     Woodworking
     Music
     Cooking
-    Various sports
-    Philosophy
+    Foodbank of Waterloo
 \end{aside}
 
 
@@ -107,11 +108,11 @@
 
 \vspace{-1em}\hspace{-4.33cm}
 \textbf{\large{%
-\hfill SOFTWARE \hfill {\small\textbullet}%
+\hfill HARDWARE \hfill {\small\textbullet}%
 \hfill EMBEDDED \hfill {\small\textbullet}%
+\hfill SOFTWARE \hfill {\small\textbullet}%
 \hfill AI/ML \hfill {\small\textbullet}%
-\hfill SYSTEM~DESIGN \hfill {\small\textbullet}%
-\hfill HARDWARE \hfill%
+\hfill SYSTEM~DESIGN \hfill%
 }}%
 
 \vspace{-1ex}\hspace{-4.33cm}\hrulefill
@@ -120,18 +121,15 @@
 %%%%%%%%%%%%
 % ABOUT ME %
 %%%%%%%%%%%%
-\vspace{-8pt}
+\vspace{-2pt}
 \section{ABOUT ME}
 
-My academic and work experience has given me development skills at many levels
-of abstraction. I have worked on everything from gate-level hardware to
-embedded software to frontend clients, and everything in between. This breadth
-of knowledge led me to the label \emph{full(er) stack developer} and I
-appreciate the perspective this affords me when designing systems and working
-across teams. I'm always looking to hone my skills and continue to learn new
-things. However, I am currently most interested in the middle of the full(er)
-stack from embedded to core application to backend.
-
+My academic and work experience has given me skills and knowledge at many levels
+of abstraction. I have worked on gate-level hardware, embedded software,
+distributed cloud backends, frontend clients, and everything in between! This
+breadth of experience led me to the label \emph{full(er) stack developer} and it
+lends me perspective when designing systems or working in multidisciplinary
+teams. I am always looking for new challenges to hone my skills.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -142,22 +140,33 @@ stack from embedded to core application to backend.
 
 \begin{entrylist}
 
+\vspace{4pt}
 \entry
     {2022--Now}
     {Arctic Wolf}
     {Waterloo, ON}
-    {\emph{Developer - platform/asset-management}
+    {\emph{Senior Developer - platform/asset-management}
     \begin{itemize}
-        \item Develop and maintain high volume services as part of the mission
-            critical 24/7 data pipeline.
+        \item Influence architecture and design across multiple teams in
+            ground-up redesign of critical asset-management services.
+        \item Coordinate high-level designs and implementation plans across
+            teams and services to avoid blockers and ensure success.
+        \item Implement fuzzy asset matching algorithm using sparse inputs and
+            establish plan for long term training and continuous improvement.
+        \item Ensure stability and maintenance of hyperscale services as part of
+            the mission critical 24/7 data pipeline (billions of inputs/day).
+        \item Steer creation and adoption of new fast, local end-to-end test
+            and build infrastructure to streamline development.
+        \item Champion code best practices to improve maintainability and
+            readability (especially git!).
+        \item Ensure code and practices comply with data security and privacy
+            standards (e.g. GDPR).
         \item Personally improve endpoint performance by 2$\times$ within first
             few weeks of employment.
-        \item Optimize workflow and reduce pain points by creating new test and
-            build infrastructure.
-        \item Champion code best practices to improve maintainability.
-        % \item Collaborate across teams to create efficient implementations.
+        \item Continue education through AWS courses and best practices.
     \end{itemize}}
 
+\vspace{4pt}
 \entry
     {2016--2022}
     {Applied Brain Research}
@@ -187,44 +196,55 @@ stack from embedded to core application to backend.
         %     in-depth workshop for international scholars to learn and use Nengo.
     \end{itemize}}
 
+\vspace{-12pt}
 \entry
     {2014--2015}
-    {Teledyne DALSA {\normalfont (co-op \times2)}}
-    {Waterloo, ON}
-    {\emph{Mechanical Designer}, \emph{Sustaining Engineer}
-    \begin{itemize}
-        \item Designed and validated custom fixtures for testing and production.
-        \item Optimized and debugged software and hardware of vision sensors.
-    \end{itemize}}
+    % {Teledyne DALSA {\normalfont (co-op \times2)}}
+    {Teledyne DALSA
+        {\normalfont \emph{Mechanical Designer}, \emph{Sustaining Engineer}}
+    }
+    {Waterloo, ON}{}
+    % {\emph{Mechanical Designer}, \emph{Sustaining Engineer}
+    % \begin{itemize}
+    %     \item Designed and validated custom fixtures for testing and production.
+    %     \item Optimized and debugged software and hardware of vision sensors.
+    % \end{itemize}}
 
+\vspace{-12pt}
 \entry
     {2014}
-    {Toyota Motor Manufacturing Canada {\normalfont (co-op)}}
-    {Cambridge, ON}
-    {\emph{Quality Control Engineer for Lexus Hybrid group}
-    \begin{itemize}
-        \item Performed root cause analysis and coordinated trial solutions.
-    \end{itemize}}
+    % {Toyota Motor Manufacturing Canada {\normalfont (co-op)}}
+    {Toyota Motor Manufacturing Canada
+        {\normalfont \emph{QC Engineer - Lexus}}
+    }
+    {Cambridge, ON}{}
+    % {\emph{Quality Control Engineer for Lexus Hybrid group}
+    % \begin{itemize}
+    %     \item Performed root cause analysis and coordinated trial solutions.
+    % \end{itemize}}
 
+\vspace{-12pt}
 \entry
     {2013}
-    {Intellijoint Surgical {\normalfont \emph{formerly Avenir Medical} (co-op)}}
-    {Waterloo, ON}
-    {\emph{Medical Device Designer}
-    \begin{itemize}
-        \item Implemented and evaluated optical feature extraction algorithms.
-    \end{itemize}}
+    % {Intellijoint Surgical {\normalfont \emph{formerly Avenir Medical} (co-op)}}
+    {Intellijoint Surgical {\normalfont \emph{Medical Device Designer}}}
+    {Waterloo, ON}{}
+    % {\emph{Medical Device Designer}
+    % \begin{itemize}
+    %     \item Implemented and evaluated optical feature extraction algorithms.
+    % \end{itemize}}
 
+\vspace{-12pt}
 \entry
     {2012--2013}
-    {IKO Industries {\normalfont (co-op \times2)}}
-    {Madoc, ON}
-    {\emph{Mechanical Engineer}, \emph{Electrical \& Systems Engineer}
-    \begin{itemize}
-        \item Improved throughput by 13\% with analysis and recommendation.
-        \item Optimized sensors, PLC, and HMI.
-    \end{itemize}
-    }
+    % {IKO Industries {\normalfont (co-op \times2)}}
+    {IKO Industries {\normalfont \emph{Mech. Engineer}, \emph{Electrical \& Systems Engineer}}}
+    {Madoc, ON}{}
+    % {\emph{Mechanical Engineer}, \emph{Electrical \& Systems Engineer}
+    % \begin{itemize}
+    %     \item Improved throughput by 13\% with analysis and recommendation.
+    %     \item Optimized sensors, PLC, and HMI.
+    % \end{itemize}}
 \end{entrylist}
 
 
@@ -239,7 +259,7 @@ stack from embedded to core application to backend.
 
 \entry
     {2017--2019}
-    {MASc {\normalfont --- Computer Hardware Engineering}}
+    {MASc {\normalfont --- Computer Hardware Engineering (research based)}}
     {\\The University of Waterloo}
     {Developed a neuromorphic hardware accelerator on FPGAs with a focus on
     run-time flexibility and accessibility. The hardware is conveniently
@@ -266,46 +286,54 @@ stack from embedded to core application to backend.
 
 \section{PUBLICATIONS}
 
-% \printbibsection{inproceedings}{~}
-% \printbibsection{thesis}{~}
-\printallbibsections
+% \printallbibsections
+\printnotbibsection{patent}{~}
+
+
+%%%%%%%%%%%%%%%%%%%
+% PATENTS SECTION %
+%%%%%%%%%%%%%%%%%%%
+
+\section{PATENTS}
+
+\printbibsection{patent}{~}
 
 
 %%%%%%%%%%%%%%%%
 % VOLUNTEERING %
 %%%%%%%%%%%%%%%%
 
-\section{VOLUNTEER WORK}
+% \section{VOLUNTEER WORK}
 
-\begin{entrylist}
+% \begin{entrylist}
 
-\entry
-    {2017--Now}
-    {The Foodbank of Waterloo Region}
-    {Kitchener, ON}
-    {Work at the distribution warehouse to sort food and keep track of
-    local inventory. This is a fun, low mental effort, and social position that
-    benefits the community --- everybody wins!}
+% \entry
+%     {2017--Now}
+%     {The Foodbank of Waterloo Region}
+%     {Kitchener, ON}
+%     {Work at the distribution warehouse to sort food and keep track of
+%     local inventory. This is a fun, low mental effort, and social position that
+%     benefits the community --- everybody wins!}
 
-\entry
-    {2017}
-    {Teaching Assistant}
-    {Heterogeneous Architecture Summer School}
-    {Assisted with a one week workshop teaching students about computation using
-    heterogeneous hardware platforms (FPGA, GPU, CPU).}
+% \entry
+%     {2017}
+%     {Teaching Assistant}
+%     {Heterogeneous Architecture Summer School}
+%     {Assisted with a one week workshop teaching students about computation using
+%     heterogeneous hardware platforms (FPGA, GPU, CPU).}
 
-\entry
-    {2014--2015}
-    {Federation Orientation Committee}
-    {The University of Waterloo}
-    {One of four volunteers responsible for planning Engineering Orientation
-    Week 2015 for $\approx$2000 incoming students:
-    \begin{itemize}
-        \item Interviewed, hired, and managed a team of $\approx$400 volunteers.
-        \item Obtained sponsorship and created a formal budget for the year.
-        \item Worked alongside numerous other entities within the University.
-        \item Kept well documented records for continuous improvement.
-    \end{itemize}}
+% \entry
+%     {2014--2015}
+%     {Federation Orientation Committee}
+%     {The University of Waterloo}
+%     {One of four volunteers responsible for planning Engineering Orientation
+%     Week 2015 for $\approx$2000 incoming students:
+%     \begin{itemize}
+%         \item Interviewed, hired, and managed a team of $\approx$400 volunteers.
+%         \item Obtained sponsorship and created a formal budget for the year.
+%         \item Worked alongside numerous other entities within the University.
+%         \item Kept well documented records for continuous improvement.
+%     \end{itemize}}
 
 % \entry
 %     {2011--2015}
@@ -321,7 +349,7 @@ stack from embedded to core application to backend.
 %         \item Organize weekly training and termly first-aid competition.
 %     \end{itemize}}
 
-\end{entrylist}
+% \end{entrylist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CERTIFICATIONS & AWARDS %
@@ -368,6 +396,6 @@ stack from embedded to core application to backend.
 \thispagestyle{fancy}  % Show footer
 \fancyfootoffset[L]{4.6cm}  % Compensate for sidebar
 \fancyhf{}  % Clear header and footer tempaltes
-\lfoot{\small\addfontfeature{Color=lightgray}Last updated 2022-06-18}
+\lfoot{\small\addfontfeature{Color=lightgray}Last updated 2024-05-09}
 
 \end{document}

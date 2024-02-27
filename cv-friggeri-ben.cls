@@ -375,9 +375,18 @@
 \newcommand{\printbibsection}[2]{
   \begin{refsection}
     \nocite{*}
-    \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=bibheading]
-    % \printbibliography[sorting=chronological, type={#1}, title={#2},
-    %                    heading=none]
+    % \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=bibheading]
+    \printbibliography[sorting=chronological, type={#1}, title={#2},
+                       heading=none]
+  \end{refsection}
+}
+
+\newcommand{\printnotbibsection}[2]{
+  \begin{refsection}
+    \nocite{*}
+    % \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=bibheading]
+    \printbibliography[sorting=chronological, nottype={#1}, title={#2},
+                       heading=none]
   \end{refsection}
 }
 

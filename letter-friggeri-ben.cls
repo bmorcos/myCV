@@ -80,6 +80,16 @@
 
 \RequirePackage{tikz}
 
+\RequirePackage{hyperref}
+\hypersetup{
+  hidelinks,
+  %colorlinks,
+  linkcolor=red,
+  citecolor=red,
+  filecolor=red,
+  urlcolor = blue
+}
+
 \newcommand{\rolefont}{%
   \fontsize{14pt}{24pt}\selectfont%
   \thinfont%
@@ -101,7 +111,7 @@
   \vspace{-12\parskip}
 
   \hspace{-2em}\textbf{\large{%
-    \hfill\hfill #4 \hfill {\small\textbullet}%
+    \hfill\hfill {\href{mailto:#4}{#4}} \hfill {\small\textbullet}%
     \hfill #5 \hfill\hfill %
   }}%
 
